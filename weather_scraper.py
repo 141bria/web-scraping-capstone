@@ -1,5 +1,6 @@
 import csv
 import pandas as pd
+import sqlite3
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -17,5 +18,3 @@ with open("weather_words.csv","w",newline='') as file:
         writer.writerow([word.text,definition.text])
 
 driver.quit()
-
-pd.read_csv("weather_words.csv")
